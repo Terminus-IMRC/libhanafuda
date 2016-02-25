@@ -27,7 +27,7 @@
 
 #define lh_int_to_fuda_t(i) (((LH_FUDA_T) ((i))))
 
-#define lh_month(fuda) ((((int)((fuda)) & 0b111100) >> 2))
-#define lh_day(fuda)   ((((int)((fuda)) & 0b000011)))
+#define lh_month(fuda) ((((int)((fuda)) & 0x3c) >> 2))
+#define lh_day(fuda)   ((((int)((fuda)) & 0x03) >> 0))
 
 #endif /* HANAFUDA_H */
